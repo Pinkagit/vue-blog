@@ -23,11 +23,11 @@
     |-- .gitignore                       
     |-- README.md
     |-- app.js
-	|-- config.js  
+    |-- config.js  
     |-- log.js                   
-	|-- package.json                     
+    |-- package.json                     
     |-- run.py
-	|-- yarn.lock                        
+    |-- yarn.lock                        
 ```
 
 # 项目启动
