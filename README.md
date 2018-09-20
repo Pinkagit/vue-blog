@@ -9,18 +9,18 @@
 后端：nodejs + koa2 + mongodb
 
 # 项目结构
-```javascript
+```bash
     |-- config      
     |-- db          
     |-- logs
     |-- routes           
-	|-- static                           // 静态资源
-	|   |-- static                          // build后资源文件
-	|   |-- upload                          // 上传资源
-	|   |-- vue-blog                        // 前端源码
+    |-- static                           // 静态资源
+    |   |-- static                          // build后资源文件
+    |   |-- upload                          // 上传资源
+    |   |-- vue-blog                        // 前端源码
     |   |-- index.html                      // build后资源文件
-	|   
-	|-- .gitignore                       
+    |   
+    |-- .gitignore                       
     |-- README.md
     |-- app.js
 	|-- config.js  
@@ -34,7 +34,7 @@
 
 1. 初始化项目
 
-```bash
+```
     $ npm install
     $ cd static/vue-blog
     $ npm install
