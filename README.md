@@ -32,7 +32,7 @@
 
 1. 初始化项目
 
-```
+```bash
     $ npm install
     $ cd static/vue-blog
     $ npm install
