@@ -35,23 +35,23 @@
 1. 初始化项目
 
 ```
-    $ npm install
-    $ cd static/vue-blog
-    $ npm install
+$ npm install
+$ cd static/vue-blog
+$ npm install
 ```
  
 2. 启动MongoDB
 ```bash
-    $ mongod --dbpath XXX
+$ mongod --dbpath XXX
 ```
 3. 启动服务器
 ```bash
-    $ node app.js
+$ node app.js
 ```
 4. 启动项目
 ```bash
-    # static/vue-blog
-    $ yarn start
+# static/vue-blog
+$ yarn start
 ```
 
 # 组件
