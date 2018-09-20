@@ -9,6 +9,7 @@
 后端：nodejs + koa2 + mongodb
 
 # 项目结构
+```bash
 	|-- config      
     |-- db          
     |-- logs
@@ -27,6 +28,7 @@
 	|-- package.json                     
     |-- run.py
 	|-- yarn.lock                        
+```
 
 # 项目启动
 
@@ -39,12 +41,11 @@
 ```
  
 2. 启动MongoDB
-```
+```bash
     $ mongod --dbpath XXX
 ```
 3. 启动服务器
-```javascript
-    // xixi
+```bash
     $ node app.js
 ```
 4. 启动项目
