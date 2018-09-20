@@ -39,20 +39,23 @@
 ```
  
 2. 启动MongoDB
-
-    `$ mongod --dbpath XXX`
-
+```
+    $ mongod --dbpath XXX
+```
 3. 启动服务器
-
-    `$ node app.js`
-
+```
+    // xixi
+    $ node app.js
+```
 4. 启动项目
-    
-    `$ yarn start`
+```
+    # static/vue-blog
+    $ yarn start
+```
 
 # 组件
 
-+ UI组件：<a herf="http://element.eleme.io/#/zh-CN">element-ui</a>
++ UI组件：<a href="http://element.eleme.io/#/zh-CN" target="_blank">element-ui</a>
 + 图片裁剪插件：<a href="https://github.com/xyxiao001/vue-cropper" target="_blank">vue-cropper</a>
 + 富文本编辑器：<a href="https://www.tiny.cloud/" target="_blank">TinyMCE</a>
-+ 标签云： <a href="https://cran.r-project.org/web/packages/wordcloud2/vignettes/wordcloud.html">Wordcloud2</a>
++ 标签云： <a href="https://cran.r-project.org/web/packages/wordcloud2/vignettes/wordcloud.html" target="_blank">Wordcloud2</a>
