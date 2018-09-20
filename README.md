@@ -43,12 +43,12 @@
     $ mongod --dbpath XXX
 ```
 3. 启动服务器
-```
+```javascript
     // xixi
     $ node app.js
 ```
 4. 启动项目
-```
+```bash
     # static/vue-blog
     $ yarn start
 ```
