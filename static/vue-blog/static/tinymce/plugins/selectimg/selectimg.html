@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            width: 100%;
+        }
+        .wrap{
+            width: 100%;
+        }
+        .btn-wrap{
+            width: 100%;
+            height: 50px;
+            border-top: 1px solid #bbb;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+        .btn-wrap>span{
+            display: block;
+            width: 70px;
+            height: 30px;
+            float: right;
+            margin: 10px 10px 0 0;
+            border: 1px solid #C1C1C1;
+        }
+        .btn-wrap>span>a{
+            text-decoration: none;
+            color: #555;
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 30px;
+            transition: all .3s;
+        }
+        .btn-wrap>span>a:hover{
+            background: #555;
+            color: #eee;
+        }
+        .box{
+            float: left;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            cursor: pointer;
+            transition: all .2s;
+            box-sizing: border-box;
+            margin: 10px;
+        }
+        .del{
+            display: block;
+            background: url('./del.png') no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            transition: all .2s;
+        }
+        .box:hover{
+            border: 1px solid lightblue;
+        }
+        .box:hover .del{
+            opacity: 1;
+        }
+        .box>img{
+            width: 100%;
+            height: 80px;
+        }
+        .box>p{
+            margin: 0;
+            width: 100%;
+            height: 20px;
+            position: absolute;
+            font-size: 12px;
+            left: 0;
+            bottom: 0;
+            text-align: center;
+            line-height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .active{
+            border: 2px solid lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrap">
+        </div>
+        <div class="btn-wrap">
+            <span><a href="javascript:void(0);" id="confirm">确认</a></span>
+        </div>
+    </div>
+    
+    <script src="./jquery-1.11.1.min.js"></script>
+    <script>
+        // localStorage 获取当前用户id
+        let data = {
+            userid: window.localStorage.getItem('userid')
+        }
+        if (!data.userid) {
+            console.warn("err: 获取用户id失败！")
+        }
+        
+        $.ajax({
+            url: '/user/getimage',
+            type: 'GET',
+            data: data,
+            error: function (err) {
+                console.log("err:", err);
+            },
+            success: function (response) {
+                for(let i = 0, len = response.imglist.length; i < len; i++) {
+                    let item = response.imglist[i];
+                    let div = $(`
+                    <div class="box">
+                        <img src="${item.path}" title="${item.filename}">
+                        <p>${item.filename}</p>
+                        <span class="del"></span>
+                    </div>
+                    `)
+                    $(".wrap").append(div);
+                }
+                
+            }
+        })
+
+        let old_this, current_path, current_title;
+        $(document).on("click", ".box",function () {
+            $(old_this).removeClass('active');
+            $(this).addClass('active');
+            
+            current_path = $(this).find("img").attr("src");
+            current_title = $(this).find("img").attr("title");
+            
+            old_this = this;
+        })
+
+        $("#confirm").on("click", function () {
+            let img = `<img src="${current_path}" title="${current_title}">`;
+            
+            if (current_path && current_title) {
+                window.parent.tinyMCE.activeEditor.execCommand('mceInsertContent', 0, img);     //获取内容并插
+            }
+            window.parent.tinyMCE.activeEditor.windowManager.close();                       //关闭对话框
+        })
+
+        $(document).on("click", ".del", function (ev) {
+            // 阻止事件冒泡
+            ev.stopPropagation();
+
+            let img_path =  $(this).siblings("img").attr("src");
+            let boxDom = $(this).parent();
+
+            let data = {
+                img_path,
+            }
+            
+            $.ajax({
+                url: '/user/delimage',
+                type: 'GET',
+                data: data,
+                error: function (err) {
+                    console.log(err);
+                },
+                success: function (rep) {
+                    console.log(rep);
+                    // 删除元素节点
+                    boxDom.remove();
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>

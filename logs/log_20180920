@@ -1,0 +1,584 @@
+[2018-09-20 16:20:47.284] [INFO] console - Server listening on port 3000.
+[2018-09-20 16:20:48.309] [INFO] console - 数据库连接成功！
+[2018-09-20 16:27:12.542] [ERROR] console - (node:4372) DeprecationWarning: collection.count is deprecated, and will be removed in a future version. Use collection.countDocuments or collection.estimatedDocumentCount instead
+[2018-09-20 16:27:12.551] [ERROR] console - (node:4372) DeprecationWarning: collection.find option [fields] is deprecated and will be removed in a later version.
+[2018-09-20 16:27:12.568] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 42ms
+[2018-09-20 16:27:12.615] [INFO] console - GET /article/gettags - 82ms
+[2018-09-20 16:27:51.100] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 4ms
+[2018-09-20 16:33:00.369] [INFO] console - GET /article/serachArt?querycontent=t - 59ms
+[2018-09-20 16:33:00.562] [INFO] console - GET /article/serachArt?querycontent=ta - 2ms
+[2018-09-20 16:33:06.098] [INFO] console - GET /article/serachArt?querycontent=dsaf - 8ms
+[2018-09-20 16:33:07.868] [INFO] console - GET /article/serachArt?querycontent=dsafd - 4ms
+[2018-09-20 16:33:08.957] [INFO] console - GET /article/serachArt?querycontent=dsafdd - 3ms
+[2018-09-20 16:33:20.228] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 2ms
+[2018-09-20 16:42:51.521] [INFO] console - Server listening on port 3000.
+[2018-09-20 16:42:52.566] [INFO] console - 数据库连接成功！
+[2018-09-20 16:43:00.047] [ERROR] console - (node:8508) DeprecationWarning: collection.count is deprecated, and will be removed in a future version. Use collection.countDocuments or collection.estimatedDocumentCount instead
+[2018-09-20 16:43:00.057] [ERROR] console - (node:8508) DeprecationWarning: collection.find option [fields] is deprecated and will be removed in a later version.
+[2018-09-20 16:43:01.141] [INFO] console - GET /article/gettags - 1101ms
+[2018-09-20 16:43:01.162] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 1126ms
+[2018-09-20 16:44:11.990] [ERROR] console - (node:8508) DeprecationWarning: collection.find option [fields] is deprecated and will be removed in a later version.
+[2018-09-20 16:44:11.999] [INFO] Bloglog - Blog: Register ,username: 五权, sta: 1
+[2018-09-20 16:44:12.000] [INFO] console - 重命名成功！
+[2018-09-20 16:44:12.005] [ERROR] console - (node:8508) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+[2018-09-20 16:44:12.007] [INFO] console - 头像保存成功！
+[2018-09-20 16:44:12.007] [INFO] console - POST /user/register - 31ms
+[2018-09-20 16:44:12.230] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 4ms
+[2018-09-20 16:44:12.361] [INFO] Bloglog - Blog: Login ,username: 五权, sta:1
+[2018-09-20 16:44:12.361] [INFO] console - POST /user/login - 18ms
+[2018-09-20 16:44:12.368] [INFO] console - GET /article/gettags - 13ms
+[2018-09-20 16:44:12.400] [INFO] console - POST /user/getuserinfo - 5ms
+[2018-09-20 16:44:13.750] [INFO] console - GET /upload/avatar/5ba35ddb1fef47213c5a2da2.png - 3ms
+[2018-09-20 16:58:36.730] [INFO] console - Server listening on port 3000.
+[2018-09-20 16:58:36.735] [INFO] console - 数据库连接错误！
+[2018-09-20 16:58:36.743] [INFO] console - { MongoError: port must be specified
+    at Function.MongoError.create (G:\gitcode\private\xl-blog\node_modules\mongodb-core\lib\error.js:49:10)
+    at new Server (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\topologies\server.js:136:24)
+    at options.servers.map.serverObj (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\operations\mongo_client_ops.js:575:9)
+    at Array.map (<anonymous>)
+    at translateOptions (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\operations\mongo_client_ops.js:572:26)
+    at createServer (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\operations\mongo_client_ops.js:332:19)
+    at parseFn (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\operations\mongo_client_ops.js:221:14)
+    at parseConnectionString (G:\gitcode\private\xl-blog\node_modules\mongodb-core\lib\uri_parser.js:307:3)
+    at connect (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\operations\mongo_client_ops.js:179:3)
+    at connectOp (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\operations\mongo_client_ops.js:283:3)
+    at executeOperation (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\utils.js:420:24)
+    at MongoClient.connect (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\mongo_client.js:168:10)
+    at Promise (G:\gitcode\private\xl-blog\node_modules\mongoose\lib\connection.js:499:12)
+    at new Promise (<anonymous>)
+    at NativeConnection.Connection.openUri (G:\gitcode\private\xl-blog\node_modules\mongoose\lib\connection.js:496:19)
+    at Mongoose.connect (G:\gitcode\private\xl-blog\node_modules\mongoose\lib\index.js:229:15)
+  name: 'MongoError',
+  message: 'port must be specified',
+  driver: true,
+  [Symbol(mongoErrorContextSymbol)]: {} }
+[2018-09-20 16:59:30.941] [INFO] console - Server listening on port 3000.
+[2018-09-20 16:59:30.944] [INFO] console - 数据库连接错误！
+[2018-09-20 16:59:30.944] [INFO] console - { MongoError: port must be specified
+    at Function.MongoError.create (G:\gitcode\private\xl-blog\node_modules\mongodb-core\lib\error.js:49:10)
+    at new Server (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\topologies\server.js:136:24)
+    at options.servers.map.serverObj (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\operations\mongo_client_ops.js:575:9)
+    at Array.map (<anonymous>)
+    at translateOptions (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\operations\mongo_client_ops.js:572:26)
+    at createServer (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\operations\mongo_client_ops.js:332:19)
+    at parseFn (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\operations\mongo_client_ops.js:221:14)
+    at parseConnectionString (G:\gitcode\private\xl-blog\node_modules\mongodb-core\lib\uri_parser.js:307:3)
+    at connect (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\operations\mongo_client_ops.js:179:3)
+    at connectOp (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\operations\mongo_client_ops.js:283:3)
+    at executeOperation (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\utils.js:420:24)
+    at MongoClient.connect (G:\gitcode\private\xl-blog\node_modules\mongodb\lib\mongo_client.js:168:10)
+    at Promise (G:\gitcode\private\xl-blog\node_modules\mongoose\lib\connection.js:499:12)
+    at new Promise (<anonymous>)
+    at NativeConnection.Connection.openUri (G:\gitcode\private\xl-blog\node_modules\mongoose\lib\connection.js:496:19)
+    at Mongoose.connect (G:\gitcode\private\xl-blog\node_modules\mongoose\lib\index.js:229:15)
+  name: 'MongoError',
+  message: 'port must be specified',
+  driver: true,
+  [Symbol(mongoErrorContextSymbol)]: {} }
+[2018-09-20 17:00:26.183] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:00:27.215] [INFO] console - 数据库连接成功！
+[2018-09-20 17:00:32.518] [ERROR] console - (node:9160) DeprecationWarning: collection.count is deprecated, and will be removed in a future version. Use collection.countDocuments or collection.estimatedDocumentCount instead
+[2018-09-20 17:00:32.521] [INFO] console - POST /user/getuserinfo - 36ms
+[2018-09-20 17:00:33.538] [INFO] console - GET /article/gettags - 1028ms
+[2018-09-20 17:00:33.540] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 1032ms
+[2018-09-20 17:00:33.562] [INFO] console - GET /upload/avatar/5ba35ddb1fef47213c5a2da2.png - 2ms
+[2018-09-20 17:01:02.166] [INFO] Bloglog - Blog: Register ,username: www, sta: 1
+[2018-09-20 17:01:02.170] [INFO] console - 重命名成功！
+[2018-09-20 17:01:02.176] [ERROR] console - (node:9160) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+[2018-09-20 17:01:02.179] [INFO] console - 头像保存成功！
+[2018-09-20 17:01:02.180] [INFO] console - POST /user/register - 52ms
+[2018-09-20 17:01:02.388] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 6ms
+[2018-09-20 17:01:02.519] [INFO] Bloglog - Blog: Login ,username: www, sta:1
+[2018-09-20 17:01:02.519] [INFO] console - POST /user/login - 7ms
+[2018-09-20 17:01:02.524] [INFO] console - GET /article/gettags - 9ms
+[2018-09-20 17:01:02.537] [INFO] console - POST /user/getuserinfo - 5ms
+[2018-09-20 17:01:03.861] [INFO] console - GET /upload/avatar/5ba361ce4cd9da23c886e359.png - 2ms
+[2018-09-20 17:01:11.482] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:01:11.787] [INFO] console - GET /article/getpersonarticle?name=www - 4ms
+[2018-09-20 17:01:19.922] [INFO] console - --------User表修改成功！
+[2018-09-20 17:01:19.935] [INFO] console - ------------ Article表修改成功！
+[2018-09-20 17:01:19.938] [INFO] Bloglog - Blog: Updateusername ,oldusername: www, newusername:wqq, sta:true 
+[2018-09-20 17:01:19.938] [INFO] console - POST /user/updateusername - 21ms
+[2018-09-20 17:01:20.170] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 3ms
+[2018-09-20 17:01:20.301] [INFO] console - POST /user/getuserinfo - 4ms
+[2018-09-20 17:01:20.307] [INFO] console - GET /article/gettags - 8ms
+[2018-09-20 17:02:48.956] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 5ms
+[2018-09-20 17:02:48.958] [INFO] console - POST /user/getuserinfo - 5ms
+[2018-09-20 17:02:48.961] [INFO] console - GET /article/gettags - 7ms
+[2018-09-20 17:02:50.009] [INFO] console - GET /upload/avatar/5ba361ce4cd9da23c886e359.png - 1ms
+[2018-09-20 17:03:05.250] [INFO] console - GET /user/checkToken - 1ms
+[2018-09-20 17:03:08.146] [INFO] console - POST /user/getuserinfo - 7ms
+[2018-09-20 17:03:08.149] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 21ms
+[2018-09-20 17:03:08.153] [INFO] console - GET /article/gettags - 8ms
+[2018-09-20 17:03:10.712] [INFO] console - POST /user/getinfo - 3ms
+[2018-09-20 17:03:10.719] [INFO] console - GET /article/getpersonarticle?name=wqq - 9ms
+[2018-09-20 17:04:59.565] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 9ms
+[2018-09-20 17:04:59.572] [INFO] console - POST /user/getuserinfo - 10ms
+[2018-09-20 17:04:59.575] [INFO] console - GET /article/gettags - 11ms
+[2018-09-20 17:05:00.610] [INFO] console - GET /upload/avatar/5ba361ce4cd9da23c886e359.png - 1ms
+[2018-09-20 17:05:01.436] [INFO] console - POST /user/getuserinfo - 5ms
+[2018-09-20 17:05:01.439] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 8ms
+[2018-09-20 17:05:01.738] [INFO] console - GET /article/gettags - 2ms
+[2018-09-20 17:05:02.477] [INFO] console - GET /upload/avatar/5ba361ce4cd9da23c886e359.png - 2ms
+[2018-09-20 17:05:11.654] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:05:11.959] [INFO] console - GET /article/getpersonarticle?name=wqq - 3ms
+[2018-09-20 17:05:15.883] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 7ms
+[2018-09-20 17:05:15.890] [INFO] console - POST /user/getuserinfo - 9ms
+[2018-09-20 17:05:15.892] [INFO] console - GET /article/gettags - 9ms
+[2018-09-20 17:05:17.859] [INFO] console - GET /user/checkToken - 1ms
+[2018-09-20 17:05:23.434] [INFO] console - 新增文章-------------------------
+[2018-09-20 17:05:23.978] [INFO] Bloglog - Blog: Upload_article , username: wqq, type: 新增文章, sta: 1 
+[2018-09-20 17:05:23.979] [INFO] console - POST /article/upload_article - 546ms
+[2018-09-20 17:05:25.356] [INFO] console - POST /user/getuserinfo - 3ms
+[2018-09-20 17:05:25.367] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 13ms
+[2018-09-20 17:05:25.412] [INFO] console - GET /article/gettags - 50ms
+[2018-09-20 17:05:41.072] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:05:42.149] [INFO] console - 数据库连接成功！
+[2018-09-20 17:05:46.942] [INFO] console - !!!!!!!!!!!!!!!!!!!!!! 1
+[2018-09-20 17:05:46.943] [INFO] console - POST /user/getuserinfo - 45ms
+[2018-09-20 17:05:47.963] [INFO] console - ++++++++++++++ 1
+[2018-09-20 17:05:47.990] [INFO] console - GET /upload/avatar/5ba361ce4cd9da23c886e359.png - 1ms
+[2018-09-20 17:05:48.970] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 2075ms
+[2018-09-20 17:05:48.974] [INFO] console - GET /article/gettags - 2054ms
+[2018-09-20 17:05:56.652] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:05:57.668] [INFO] console - 数据库连接成功！
+[2018-09-20 17:06:04.622] [INFO] console - GET /article/read_article?artid=5ba362d34cd9da23c886e35a - 19ms
+[2018-09-20 17:06:10.474] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 13ms
+[2018-09-20 17:06:28.472] [INFO] Bloglog - Blog: Register ,username: qq, sta: 1
+[2018-09-20 17:06:28.474] [INFO] console - 重命名成功！
+[2018-09-20 17:06:28.479] [ERROR] console - (node:8744) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+[2018-09-20 17:06:28.485] [INFO] console - 头像保存成功！
+[2018-09-20 17:06:28.488] [INFO] console - POST /user/register - 38ms
+[2018-09-20 17:06:28.707] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 5ms
+[2018-09-20 17:06:28.832] [INFO] Bloglog - Blog: Login ,username: qq, sta:1
+[2018-09-20 17:06:28.832] [INFO] console - POST /user/login - 13ms
+[2018-09-20 17:06:28.836] [INFO] console - GET /article/gettags - 6ms
+[2018-09-20 17:06:28.845] [INFO] console - POST /user/getuserinfo - 5ms
+[2018-09-20 17:06:30.164] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 1ms
+[2018-09-20 17:09:11.359] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:09:12.392] [INFO] console - 数据库连接成功！
+[2018-09-20 17:09:17.474] [INFO] console - POST /user/getinfo - 33ms
+[2018-09-20 17:09:17.481] [INFO] console - GET /article/getpersonarticle?name=qq - 17ms
+[2018-09-20 17:09:17.691] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 1ms
+[2018-09-20 17:09:29.727] [INFO] Bloglog - Blog: Updateavatar ,username: qq
+[2018-09-20 17:09:29.727] [INFO] console - POST /user/updateavatar - 8ms
+[2018-09-20 17:09:33.237] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:09:33.295] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 2ms
+[2018-09-20 17:09:38.375] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:09:39.405] [INFO] console - 数据库连接成功！
+[2018-09-20 17:09:45.454] [INFO] Bloglog - Blog: Updateavatar ,username: qq
+[2018-09-20 17:09:45.455] [INFO] console - POST /user/updateavatar - 14ms
+[2018-09-20 17:09:50.502] [INFO] console - POST /user/getinfo - 1102ms
+[2018-09-20 17:09:50.516] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 6ms
+[2018-09-20 17:09:56.500] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:09:57.515] [INFO] console - 数据库连接成功！
+[2018-09-20 17:10:00.951] [INFO] console - POST /user/getinfo - 29ms
+[2018-09-20 17:10:01.002] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 5ms
+[2018-09-20 17:10:11.221] [INFO] Bloglog - Blog: Updateavatar ,username: qq
+[2018-09-20 17:10:11.221] [INFO] console - POST /user/updateavatar - 9ms
+[2018-09-20 17:10:14.306] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 9ms
+[2018-09-20 17:10:14.598] [INFO] console - POST /user/getuserinfo - 4ms
+[2018-09-20 17:10:14.602] [INFO] console - GET /article/gettags - 6ms
+[2018-09-20 17:10:17.288] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:10:17.592] [INFO] console - GET /article/getpersonarticle?name=qq - 2ms
+[2018-09-20 17:10:25.639] [ERROR] console - (node:11004) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+[2018-09-20 17:10:25.642] [INFO] console - --------User表修改成功！
+[2018-09-20 17:10:25.645] [INFO] console - ------------ Article表修改成功！
+[2018-09-20 17:10:25.650] [INFO] Bloglog - Blog: Updateusername ,oldusername: qq, newusername:111123, sta:true 
+[2018-09-20 17:10:25.651] [INFO] console - POST /user/updateusername - 19ms
+[2018-09-20 17:10:25.894] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 3ms
+[2018-09-20 17:10:26.014] [INFO] console - POST /user/getuserinfo - 5ms
+[2018-09-20 17:10:27.025] [INFO] console - GET /article/gettags - 1016ms
+[2018-09-20 17:10:46.336] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:10:47.365] [INFO] console - 数据库连接成功！
+[2018-09-20 17:10:50.404] [INFO] console - POST /user/getuserinfo - 37ms
+[2018-09-20 17:10:51.436] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 1044ms
+[2018-09-20 17:10:51.457] [INFO] console - GET /article/gettags - 1055ms
+[2018-09-20 17:10:51.646] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 1ms
+[2018-09-20 17:10:53.900] [INFO] console - POST /user/getinfo - 7ms
+[2018-09-20 17:10:53.906] [INFO] console - GET /article/getpersonarticle?name=111123 - 6ms
+[2018-09-20 17:10:59.146] [INFO] console - --------User表修改成功！
+[2018-09-20 17:10:59.149] [ERROR] console - (node:3204) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+[2018-09-20 17:10:59.150] [INFO] console - ------------ Article表修改成功！
+[2018-09-20 17:10:59.150] [INFO] Bloglog - Blog: Updateusername ,oldusername: 111123, newusername:333, sta:true 
+[2018-09-20 17:10:59.151] [INFO] console - POST /user/updateusername - 12ms
+[2018-09-20 17:10:59.492] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 6ms
+[2018-09-20 17:10:59.512] [INFO] console - POST /user/getuserinfo - 3ms
+[2018-09-20 17:10:59.525] [INFO] console - GET /article/gettags - 7ms
+[2018-09-20 17:11:17.637] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:11:18.651] [INFO] console - 数据库连接成功！
+[2018-09-20 17:11:23.527] [INFO] console - POST /user/getinfo - 40ms
+[2018-09-20 17:11:23.539] [INFO] console - GET /article/getpersonarticle?name=333 - 24ms
+[2018-09-20 17:11:31.575] [INFO] console - --------User表修改成功！
+[2018-09-20 17:11:31.580] [INFO] console - ------------ Article表修改成功！
+[2018-09-20 17:11:31.586] [INFO] Bloglog - Blog: Updateusername ,oldusername: 333, newusername:333333, sta:true 
+[2018-09-20 17:11:31.586] [INFO] console - POST /user/updateusername - 37ms
+[2018-09-20 17:11:31.950] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 7ms
+[2018-09-20 17:11:31.960] [INFO] console - POST /user/getuserinfo - 7ms
+[2018-09-20 17:11:32.959] [INFO] console - GET /article/gettags - 1004ms
+[2018-09-20 17:11:51.371] [INFO] console - GET /user/checkToken - 2ms
+[2018-09-20 17:11:57.356] [INFO] console - 新增文章-------------------------
+[2018-09-20 17:11:57.368] [INFO] Bloglog - Blog: Upload_article , username: 333333, type: 新增文章, sta: 1 
+[2018-09-20 17:11:57.368] [INFO] console - POST /article/upload_article - 12ms
+[2018-09-20 17:11:58.717] [INFO] console - POST /user/getuserinfo - 3ms
+[2018-09-20 17:11:58.722] [INFO] console - GET /article/gettags - 7ms
+[2018-09-20 17:11:58.727] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 14ms
+[2018-09-20 17:12:44.598] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:12:44.622] [INFO] console - GET /article/getpersonarticle?name=333333 - 6ms
+[2018-09-20 17:12:51.690] [INFO] console - --------User表修改成功！
+[2018-09-20 17:12:51.695] [INFO] console - ------------ Article表修改成功！
+[2018-09-20 17:12:51.700] [INFO] Bloglog - Blog: Updateusername ,oldusername: 333333, newusername:qq, sta:true 
+[2018-09-20 17:12:51.700] [INFO] console - POST /user/updateusername - 12ms
+[2018-09-20 17:12:52.118] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 4ms
+[2018-09-20 17:12:52.131] [INFO] console - POST /user/getuserinfo - 4ms
+[2018-09-20 17:12:52.158] [INFO] console - GET /article/gettags - 28ms
+[2018-09-20 17:12:58.605] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:12:58.918] [INFO] console - GET /article/getpersonarticle?name=qq - 3ms
+[2018-09-20 17:14:58.927] [INFO] Bloglog - Blog: Updateavatar ,username: qq
+[2018-09-20 17:14:58.927] [INFO] console - POST /user/updateavatar - 8ms
+[2018-09-20 17:15:02.035] [INFO] console - POST /user/getinfo - 2ms
+[2018-09-20 17:15:02.059] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 1ms
+[2018-09-20 17:15:22.656] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:15:23.670] [INFO] console - 数据库连接成功！
+[2018-09-20 17:15:41.813] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:15:42.933] [INFO] console - 数据库连接成功！
+[2018-09-20 17:15:42.950] [INFO] console - POST /user/getinfo - 339ms
+[2018-09-20 17:15:42.995] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 3ms
+[2018-09-20 17:15:54.825] [ERROR] console - (node:11792) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+[2018-09-20 17:15:54.827] [INFO] console - --------User表修改成功！
+[2018-09-20 17:15:54.829] [INFO] console - ------------ Article表修改成功！
+[2018-09-20 17:15:54.830] [INFO] Bloglog - Blog: Updateusername ,oldusername: qq, newusername:xx, sta:true 
+[2018-09-20 17:15:54.830] [INFO] console - POST /user/updateusername - 12ms
+[2018-09-20 17:15:55.086] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 16ms
+[2018-09-20 17:15:55.178] [INFO] console - POST /user/getuserinfo - 4ms
+[2018-09-20 17:15:55.186] [INFO] console - GET /article/gettags - 10ms
+[2018-09-20 17:16:12.886] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:16:13.911] [INFO] console - 数据库连接成功！
+[2018-09-20 17:16:25.872] [INFO] console - POST /user/getinfo - 29ms
+[2018-09-20 17:16:25.883] [INFO] console - GET /article/getpersonarticle?name=xx - 21ms
+[2018-09-20 17:16:49.855] [ERROR] console - (node:4156) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+[2018-09-20 17:16:49.856] [INFO] Bloglog - Blog: Updatepassword ,userid: 5ba3631427c9b32228ef56cd, sta: 1
+[2018-09-20 17:16:49.856] [INFO] console - POST /user/updatepassword - 9ms
+[2018-09-20 17:17:03.607] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:17:04.624] [INFO] console - 数据库连接成功！
+[2018-09-20 17:17:14.905] [INFO] console - POST /user/getinfo - 34ms
+[2018-09-20 17:17:14.969] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 4ms
+[2018-09-20 17:17:26.019] [INFO] Bloglog - Blog: Updatepassword ,userid: 5ba3631427c9b32228ef56cd, sta: 1
+[2018-09-20 17:17:26.019] [INFO] console - POST /user/updatepassword - 18ms
+[2018-09-20 17:17:49.130] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 12ms
+[2018-09-20 17:17:51.247] [INFO] console - GET /article/gettags - 2121ms
+[2018-09-20 17:17:51.249] [INFO] console - POST /user/getuserinfo - 2125ms
+[2018-09-20 17:17:53.346] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:17:53.372] [INFO] console - GET /article/getpersonarticle?name=xx - 4ms
+[2018-09-20 17:17:57.266] [INFO] console - GET /article/read_article?artid=5ba3645d36cbba1c30e43c07 - 2ms
+[2018-09-20 17:17:57.517] [INFO] console - GET /user/checkToken - 1ms
+[2018-09-20 17:18:02.041] [INFO] console - 修改文章-------------------------
+[2018-09-20 17:18:02.051] [ERROR] console - (node:9492) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+[2018-09-20 17:18:02.053] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 修改文章, sta: 1 
+[2018-09-20 17:18:02.053] [INFO] console - POST /article/upload_article - 12ms
+[2018-09-20 17:18:12.546] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:18:13.562] [INFO] console - 数据库连接成功！
+[2018-09-20 17:18:15.555] [INFO] console - POST /user/getinfo - 32ms
+[2018-09-20 17:18:15.564] [INFO] console - GET /article/getpersonarticle?name=xx - 21ms
+[2018-09-20 17:18:18.545] [INFO] console - GET /article/read_article?artid=5ba3645d36cbba1c30e43c07 - 2ms
+[2018-09-20 17:18:18.854] [INFO] console - GET /user/checkToken - 2ms
+[2018-09-20 17:18:22.594] [INFO] console - 修改文章-------------------------
+[2018-09-20 17:18:22.614] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 修改文章, sta: 1 
+[2018-09-20 17:18:22.615] [INFO] console - POST /article/upload_article - 21ms
+[2018-09-20 17:18:24.836] [INFO] console - 新增文章-------------------------
+[2018-09-20 17:18:24.845] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 新增文章, sta: 1 
+[2018-09-20 17:18:24.845] [INFO] console - POST /article/upload_article - 9ms
+[2018-09-20 17:18:27.700] [INFO] console - 修改文章-------------------------
+[2018-09-20 17:18:27.704] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 修改文章, sta: 1 
+[2018-09-20 17:18:27.704] [INFO] console - POST /article/upload_article - 4ms
+[2018-09-20 17:18:27.950] [INFO] console - 修改文章-------------------------
+[2018-09-20 17:18:27.954] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 修改文章, sta: 1 
+[2018-09-20 17:18:27.954] [INFO] console - POST /article/upload_article - 4ms
+[2018-09-20 17:18:39.468] [INFO] console - POST /user/getinfo - 6ms
+[2018-09-20 17:18:40.473] [INFO] console - GET /article/getpersonarticle?name=xx - 1009ms
+[2018-09-20 17:18:43.207] [INFO] console - GET /article/read_article?artid=5ba3645d36cbba1c30e43c07 - 5ms
+[2018-09-20 17:18:43.528] [INFO] console - GET /user/checkToken - 3ms
+[2018-09-20 17:18:44.645] [INFO] console - GET /article/getdraftlist?name=xx - 6ms
+[2018-09-20 17:18:46.185] [INFO] console - GET /article/read_article?artid=5ba365e0f94ad92fe8023c42 - 4ms
+[2018-09-20 17:18:53.568] [ERROR] console - (node:12264) DeprecationWarning: collection.remove is deprecated. Use deleteOne, deleteMany, or bulkWrite instead.
+[2018-09-20 17:18:53.571] [INFO] Bloglog - Blog: Deletearticle, artid: 5ba365e0f94ad92fe8023c42, sta: 1
+[2018-09-20 17:18:53.571] [INFO] console - POST /article/deletearticle - 4ms
+[2018-09-20 17:19:16.793] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:19:16.800] [INFO] console - GET /article/getpersonarticle?name=xx - 2ms
+[2018-09-20 17:19:21.213] [INFO] console - GET /article/read_article?artid=5ba3645d36cbba1c30e43c07 - 3ms
+[2018-09-20 17:19:21.528] [INFO] console - GET /user/checkToken - 1ms
+[2018-09-20 17:19:26.497] [INFO] console - GET /article/getdraftlist?name=xx - 2ms
+[2018-09-20 17:19:30.851] [INFO] console - POST /user/getinfo - 6ms
+[2018-09-20 17:19:31.152] [INFO] console - GET /article/getpersonarticle?name=xx - 3ms
+[2018-09-20 17:19:33.936] [INFO] console - GET /article/read_article?artid=5ba3645d36cbba1c30e43c07 - 2ms
+[2018-09-20 17:19:34.184] [INFO] console - GET /user/checkToken - 1ms
+[2018-09-20 17:19:35.788] [INFO] console - GET /article/getdraftlist?name=xx - 6ms
+[2018-09-20 17:19:38.136] [INFO] console - POST /user/getinfo - 3ms
+[2018-09-20 17:19:38.142] [INFO] console - GET /article/getpersonarticle?name=xx - 8ms
+[2018-09-20 17:19:40.042] [INFO] console - GET /article/read_article?artid=5ba3645d36cbba1c30e43c07 - 3ms
+[2018-09-20 17:19:40.357] [INFO] console - GET /user/checkToken - 2ms
+[2018-09-20 17:19:44.212] [INFO] console - 修改文章-------------------------
+[2018-09-20 17:19:44.218] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 修改文章, sta: 1 
+[2018-09-20 17:19:44.218] [INFO] console - POST /article/upload_article - 6ms
+[2018-09-20 17:19:48.287] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:19:48.593] [INFO] console - GET /article/getpersonarticle?name=xx - 4ms
+[2018-09-20 17:19:52.946] [INFO] console - GET /article/getpersonarticle?name=xx - 6ms
+[2018-09-20 17:19:57.113] [ERROR] console - (node:12264) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+[2018-09-20 17:19:57.139] [INFO] console - 操作成功！
+[2018-09-20 17:19:57.141] [INFO] Bloglog - Blog: Movetodrafts, artid: 5ba3645d36cbba1c30e43c07, sta: 1
+[2018-09-20 17:19:57.141] [INFO] console - GET /article/movetodrafts?artid=5ba3645d36cbba1c30e43c07 - 33ms
+[2018-09-20 17:20:50.517] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:20:51.539] [INFO] console - 数据库连接成功！
+[2018-09-20 17:20:53.604] [INFO] console - POST /user/getinfo - 36ms
+[2018-09-20 17:20:53.620] [INFO] console - GET /article/getpersonarticle?name=xx - 29ms
+[2018-09-20 17:20:53.841] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 2ms
+[2018-09-20 17:20:56.703] [INFO] console - POST /user/getuserinfo - 7ms
+[2018-09-20 17:20:56.713] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 17ms
+[2018-09-20 17:20:57.007] [INFO] console - GET /article/gettags - 7ms
+[2018-09-20 17:20:59.379] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:20:59.388] [INFO] console - GET /article/getpersonarticle?name=xx - 11ms
+[2018-09-20 17:21:03.494] [INFO] console - POST /user/getuserinfo - 6ms
+[2018-09-20 17:21:03.798] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 8ms
+[2018-09-20 17:21:03.803] [INFO] console - GET /article/gettags - 10ms
+[2018-09-20 17:21:05.934] [INFO] console - POST /user/getinfo - 7ms
+[2018-09-20 17:21:05.945] [INFO] console - GET /article/getpersonarticle?name=xx - 11ms
+[2018-09-20 17:21:06.846] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 17ms
+[2018-09-20 17:21:07.144] [INFO] console - POST /user/getuserinfo - 4ms
+[2018-09-20 17:21:07.153] [INFO] console - GET /article/gettags - 4ms
+[2018-09-20 17:21:09.311] [INFO] console - GET /user/checkToken - 2ms
+[2018-09-20 17:21:10.363] [INFO] console - GET /article/getdraftlist?name=xx - 3ms
+[2018-09-20 17:21:11.398] [INFO] console - GET /article/read_article?artid=5ba3645d36cbba1c30e43c07 - 4ms
+[2018-09-20 17:21:13.115] [INFO] console - 修改文章-------------------------
+[2018-09-20 17:21:13.135] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 修改文章, sta: 1 
+[2018-09-20 17:21:13.135] [INFO] console - POST /article/upload_article - 21ms
+[2018-09-20 17:21:14.854] [INFO] console - POST /user/getuserinfo - 1027ms
+[2018-09-20 17:21:15.864] [INFO] console - GET /article/gettags - 2033ms
+[2018-09-20 17:21:15.865] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 2039ms
+[2018-09-20 17:21:17.275] [INFO] console - POST /user/getinfo - 3ms
+[2018-09-20 17:21:17.277] [INFO] console - GET /article/getpersonarticle?name=xx - 4ms
+[2018-09-20 17:21:19.922] [INFO] console - 操作成功！
+[2018-09-20 17:21:19.937] [INFO] Bloglog - Blog: Movetodrafts, artid: 5ba3645d36cbba1c30e43c07, sta: 1
+[2018-09-20 17:21:19.937] [INFO] console - GET /article/movetodrafts?artid=5ba3645d36cbba1c30e43c07 - 26ms
+[2018-09-20 17:21:25.593] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 7ms
+[2018-09-20 17:21:25.604] [INFO] console - POST /user/getuserinfo - 4ms
+[2018-09-20 17:21:25.624] [INFO] console - GET /article/gettags - 4ms
+[2018-09-20 17:21:43.680] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:21:44.703] [INFO] console - 数据库连接成功！
+[2018-09-20 17:21:46.302] [INFO] console - POST /user/getinfo - 29ms
+[2018-09-20 17:21:46.315] [INFO] console - GET /article/getpersonarticle?name=xx - 24ms
+[2018-09-20 17:21:48.740] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 9ms
+[2018-09-20 17:21:49.043] [INFO] console - POST /user/getuserinfo - 10ms
+[2018-09-20 17:21:49.050] [INFO] console - GET /article/gettags - 10ms
+[2018-09-20 17:21:51.387] [INFO] console - GET /user/checkToken - 1ms
+[2018-09-20 17:21:56.216] [INFO] console - GET /article/getdraftlist?name=xx - 3ms
+[2018-09-20 17:21:57.190] [INFO] console - GET /article/read_article?artid=5ba3645d36cbba1c30e43c07 - 3ms
+[2018-09-20 17:21:59.457] [INFO] console - 修改文章-------------------------
+[2018-09-20 17:21:59.465] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 修改文章, sta: 1 
+[2018-09-20 17:21:59.465] [INFO] console - POST /article/upload_article - 9ms
+[2018-09-20 17:22:01.717] [INFO] console - GET /article/getdraftlist?name=xx - 2ms
+[2018-09-20 17:22:04.555] [INFO] console - 新增文章-------------------------
+[2018-09-20 17:22:04.564] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 新增文章, sta: 1 
+[2018-09-20 17:22:04.564] [INFO] console - POST /article/upload_article - 10ms
+[2018-09-20 17:22:11.651] [INFO] console - GET /article/getdraftlist?name=xx - 6ms
+[2018-09-20 17:22:13.372] [INFO] console - GET /article/read_article?artid=5ba366bc5df7222a5c32e029 - 2ms
+[2018-09-20 17:22:14.790] [INFO] console - GET /article/read_article?artid=5ba366bc5df7222a5c32e029 - 3ms
+[2018-09-20 17:22:15.523] [INFO] console - GET /article/read_article?artid=5ba366bc5df7222a5c32e029 - 3ms
+[2018-09-20 17:22:15.773] [INFO] console - GET /article/read_article?artid=5ba366bc5df7222a5c32e029 - 2ms
+[2018-09-20 17:22:20.073] [INFO] console - GET /article/getdraftlist?name=xx - 3ms
+[2018-09-20 17:22:26.913] [INFO] console - 新增文章-------------------------
+[2018-09-20 17:22:26.918] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 新增文章, sta: 1 
+[2018-09-20 17:22:26.918] [INFO] console - POST /article/upload_article - 6ms
+[2018-09-20 17:22:30.285] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 13ms
+[2018-09-20 17:22:30.572] [INFO] console - POST /user/getuserinfo - 3ms
+[2018-09-20 17:22:30.580] [INFO] console - GET /article/gettags - 3ms
+[2018-09-20 17:22:32.854] [INFO] console - POST /user/getinfo - 3ms
+[2018-09-20 17:22:33.163] [INFO] console - GET /article/getpersonarticle?name=xx - 3ms
+[2018-09-20 17:22:36.912] [INFO] console - 操作成功！
+[2018-09-20 17:22:36.913] [INFO] Bloglog - Blog: Movetodrafts, artid: 5ba366d25df7222a5c32e02a, sta: 1
+[2018-09-20 17:22:36.914] [INFO] console - GET /article/movetodrafts?artid=5ba366d25df7222a5c32e02a - 5ms
+[2018-09-20 17:22:42.063] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 5ms
+[2018-09-20 17:22:42.364] [INFO] console - POST /user/getuserinfo - 3ms
+[2018-09-20 17:22:42.369] [INFO] console - GET /article/gettags - 7ms
+[2018-09-20 17:22:45.337] [INFO] console - POST /user/getinfo - 2ms
+[2018-09-20 17:22:45.351] [INFO] console - GET /article/getpersonarticle?name=xx - 4ms
+[2018-09-20 17:22:46.895] [INFO] console - POST /user/getuserinfo - 4ms
+[2018-09-20 17:22:48.203] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 1009ms
+[2018-09-20 17:22:48.206] [INFO] console - GET /article/gettags - 1012ms
+[2018-09-20 17:22:49.208] [INFO] console - GET /user/checkToken - 0ms
+[2018-09-20 17:22:50.481] [INFO] console - GET /article/getdraftlist?name=xx - 3ms
+[2018-09-20 17:22:52.195] [INFO] console - GET /article/read_article?artid=5ba366d25df7222a5c32e02a - 3ms
+[2018-09-20 17:22:52.590] [INFO] console - GET /article/read_article?artid=5ba366bc5df7222a5c32e029 - 2ms
+[2018-09-20 17:22:53.833] [INFO] console - GET /article/read_article?artid=5ba366d25df7222a5c32e02a - 1ms
+[2018-09-20 17:22:55.072] [INFO] console - GET /article/read_article?artid=5ba366bc5df7222a5c32e029 - 3ms
+[2018-09-20 17:23:01.007] [INFO] console - 修改文章-------------------------
+[2018-09-20 17:23:01.010] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 修改文章, sta: 1 
+[2018-09-20 17:23:01.010] [INFO] console - POST /article/upload_article - 4ms
+[2018-09-20 17:23:03.223] [INFO] console - GET /article/getdraftlist?name=xx - 3ms
+[2018-09-20 17:23:05.129] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 7ms
+[2018-09-20 17:23:05.146] [INFO] console - POST /user/getuserinfo - 4ms
+[2018-09-20 17:23:05.155] [INFO] console - GET /article/gettags - 12ms
+[2018-09-20 17:23:10.142] [INFO] console - GET /user/checkToken - 3ms
+[2018-09-20 17:23:11.644] [INFO] console - GET /article/getdraftlist?name=xx - 3ms
+[2018-09-20 17:23:12.689] [INFO] console - GET /article/read_article?artid=5ba366d25df7222a5c32e02a - 1ms
+[2018-09-20 17:23:14.813] [ERROR] console - (node:10844) DeprecationWarning: collection.remove is deprecated. Use deleteOne, deleteMany, or bulkWrite instead.
+[2018-09-20 17:23:14.816] [INFO] Bloglog - Blog: Deletearticle, artid: 5ba366d25df7222a5c32e02a, sta: 1
+[2018-09-20 17:23:14.816] [INFO] console - POST /article/deletearticle - 5ms
+[2018-09-20 17:23:32.534] [INFO] console - Server listening on port 3000.
+[2018-09-20 17:23:33.583] [INFO] console - 数据库连接成功！
+[2018-09-20 17:23:35.937] [INFO] console - GET /article/getdraftlist?name=xx - 32ms
+[2018-09-20 17:23:36.306] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 18ms
+[2018-09-20 17:23:36.607] [INFO] console - POST /user/getuserinfo - 16ms
+[2018-09-20 17:23:36.612] [INFO] console - GET /article/gettags - 8ms
+[2018-09-20 17:23:38.944] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:23:38.954] [INFO] console - GET /article/getpersonarticle?name=xx - 3ms
+[2018-09-20 17:23:42.517] [INFO] Bloglog - Blog: Deletearticle, artid: 5ba366bc5df7222a5c32e029, sta: 1
+[2018-09-20 17:23:42.517] [INFO] console - POST /article/deletearticle - 5ms
+[2018-09-20 17:23:46.495] [INFO] console - 操作成功！
+[2018-09-20 17:23:46.509] [INFO] Bloglog - Blog: Movetodrafts, artid: 5ba3645d36cbba1c30e43c07, sta: 1
+[2018-09-20 17:23:46.509] [INFO] console - GET /article/movetodrafts?artid=5ba3645d36cbba1c30e43c07 - 18ms
+[2018-09-20 17:23:47.858] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 15ms
+[2018-09-20 17:23:48.167] [INFO] console - POST /user/getuserinfo - 4ms
+[2018-09-20 17:23:49.193] [INFO] console - GET /article/gettags - 1028ms
+[2018-09-20 17:23:52.543] [INFO] console - GET /user/checkToken - 0ms
+[2018-09-20 17:23:54.958] [INFO] console - GET /article/getdraftlist?name=xx - 6ms
+[2018-09-20 17:23:56.848] [INFO] Bloglog - Blog: Deletearticle, artid: 5ba3645d36cbba1c30e43c07, sta: 1
+[2018-09-20 17:23:56.848] [INFO] console - POST /article/deletearticle - 2ms
+[2018-09-20 17:24:19.961] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 5ms
+[2018-09-20 17:24:19.965] [INFO] console - POST /user/getuserinfo - 6ms
+[2018-09-20 17:24:19.971] [INFO] console - GET /article/gettags - 2ms
+[2018-09-20 17:24:25.065] [INFO] console - GET /article/read_article?artid=5ba362d34cd9da23c886e35a - 4ms
+[2018-09-20 17:24:28.935] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:24:28.950] [INFO] console - GET /article/getpersonarticle?name=xx - 17ms
+[2018-09-20 17:24:32.019] [INFO] console - GET /article/getpersonarticle?name=xx - 2ms
+[2018-09-20 17:26:18.276] [INFO] console - GET /article/getpersonarticle?name=xx - 3ms
+[2018-09-20 17:27:20.518] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 7ms
+[2018-09-20 17:27:20.530] [INFO] console - POST /user/getuserinfo - 3ms
+[2018-09-20 17:27:20.537] [INFO] console - GET /article/gettags - 7ms
+[2018-09-20 17:27:22.783] [INFO] console - GET /user/checkToken - 1ms
+[2018-09-20 17:27:24.052] [INFO] console - GET /article/getdraftlist?name=xx - 3ms
+[2018-09-20 17:27:31.598] [INFO] console - 新增文章-------------------------
+[2018-09-20 17:27:31.609] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 新增文章, sta: 1 
+[2018-09-20 17:27:31.609] [INFO] console - POST /article/upload_article - 12ms
+[2018-09-20 17:27:36.807] [INFO] console - 新增文章-------------------------
+[2018-09-20 17:27:36.814] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 新增文章, sta: 1 
+[2018-09-20 17:27:36.815] [INFO] console - POST /article/upload_article - 8ms
+[2018-09-20 17:27:42.063] [INFO] console - 新增文章-------------------------
+[2018-09-20 17:27:42.067] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 新增文章, sta: 1 
+[2018-09-20 17:27:42.068] [INFO] console - POST /article/upload_article - 5ms
+[2018-09-20 17:27:43.319] [INFO] console - POST /user/getuserinfo - 3ms
+[2018-09-20 17:27:43.332] [INFO] console - GET /article/gettags - 15ms
+[2018-09-20 17:27:43.340] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 24ms
+[2018-09-20 17:27:45.481] [INFO] console - GET /article/getpersonarticle?name=xx - 6ms
+[2018-09-20 17:27:45.489] [INFO] console - POST /user/getinfo - 13ms
+[2018-09-20 17:27:50.951] [INFO] console - 操作成功！
+[2018-09-20 17:27:50.952] [INFO] Bloglog - Blog: Movetodrafts, artid: 5ba36803b58a3f20ec38e10d, sta: 1
+[2018-09-20 17:27:50.952] [INFO] console - GET /article/movetodrafts?artid=5ba36803b58a3f20ec38e10d - 4ms
+[2018-09-20 17:28:27.598] [INFO] console - POST /user/getinfo - 3ms
+[2018-09-20 17:28:27.703] [INFO] console - GET /article/getpersonarticle?name=xx - 106ms
+[2018-09-20 17:28:27.938] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 1ms
+[2018-09-20 17:28:29.833] [INFO] console - POST /user/getinfo - 3ms
+[2018-09-20 17:28:29.848] [INFO] console - GET /article/getpersonarticle?name=xx - 17ms
+[2018-09-20 17:28:30.376] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 0ms
+[2018-09-20 17:28:32.024] [INFO] console - POST /user/getinfo - 3ms
+[2018-09-20 17:28:32.026] [INFO] console - GET /article/getpersonarticle?name=xx - 4ms
+[2018-09-20 17:28:32.381] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 2ms
+[2018-09-20 17:28:33.048] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:28:33.049] [INFO] console - GET /article/getpersonarticle?name=xx - 4ms
+[2018-09-20 17:28:33.391] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 1ms
+[2018-09-20 17:28:34.092] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:28:34.093] [INFO] console - GET /article/getpersonarticle?name=xx - 4ms
+[2018-09-20 17:28:34.420] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 2ms
+[2018-09-20 17:28:35.356] [INFO] console - POST /user/getinfo - 2ms
+[2018-09-20 17:28:35.369] [INFO] console - GET /article/getpersonarticle?name=xx - 15ms
+[2018-09-20 17:28:35.561] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 1ms
+[2018-09-20 17:28:36.504] [INFO] console - POST /user/getinfo - 3ms
+[2018-09-20 17:28:36.506] [INFO] console - GET /article/getpersonarticle?name=xx - 5ms
+[2018-09-20 17:28:36.857] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 19ms
+[2018-09-20 17:28:38.002] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:28:38.003] [INFO] console - GET /article/getpersonarticle?name=xx - 3ms
+[2018-09-20 17:28:38.345] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 1ms
+[2018-09-20 17:28:39.026] [INFO] console - POST /user/getinfo - 2ms
+[2018-09-20 17:28:39.028] [INFO] console - GET /article/getpersonarticle?name=xx - 4ms
+[2018-09-20 17:28:39.381] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 11ms
+[2018-09-20 17:28:39.967] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:28:39.989] [INFO] console - GET /article/getpersonarticle?name=xx - 23ms
+[2018-09-20 17:28:40.319] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 0ms
+[2018-09-20 17:28:50.870] [INFO] console - GET /article/getpersonarticle?name=xx - 2ms
+[2018-09-20 17:31:14.810] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 3ms
+[2018-09-20 17:31:25.461] [INFO] console - GET /article/getpersonarticle?name=xx - 3ms
+[2018-09-20 17:34:26.476] [INFO] console - POST /user/getinfo - 3ms
+[2018-09-20 17:34:26.553] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 1ms
+[2018-09-20 17:35:34.099] [INFO] console - POST /user/getinfo - 2ms
+[2018-09-20 17:35:42.583] [INFO] console - POST /user/getinfo - 3ms
+[2018-09-20 17:35:42.602] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 2ms
+[2018-09-20 17:35:44.576] [INFO] console - GET /article/getpersonarticle?name=xx - 3ms
+[2018-09-20 17:38:15.225] [INFO] console - GET /article/getpersonarticle?name=xx - 14ms
+[2018-09-20 17:38:19.525] [INFO] console - 操作成功！
+[2018-09-20 17:38:19.529] [INFO] Bloglog - Blog: Movetodrafts, artid: 5ba36808b58a3f20ec38e10e, sta: 1
+[2018-09-20 17:38:19.529] [INFO] console - GET /article/movetodrafts?artid=5ba36808b58a3f20ec38e10e - 6ms
+[2018-09-20 17:38:19.846] [INFO] console - POST /user/getinfo - 2ms
+[2018-09-20 17:38:42.007] [INFO] console - POST /user/getinfo - 4ms
+[2018-09-20 17:38:42.009] [INFO] console - GET /article/getpersonarticle?name=xx - 5ms
+[2018-09-20 17:38:42.032] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 2ms
+[2018-09-20 17:38:45.007] [INFO] Bloglog - Blog: Deletearticle, artid: 5ba3680eb58a3f20ec38e10f, sta: 1
+[2018-09-20 17:38:45.007] [INFO] console - POST /article/deletearticle - 2ms
+[2018-09-20 17:38:45.028] [INFO] console - POST /user/getinfo - 3ms
+[2018-09-20 17:38:48.606] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 3ms
+[2018-09-20 17:38:48.611] [INFO] console - POST /user/getuserinfo - 4ms
+[2018-09-20 17:38:48.612] [INFO] console - GET /article/gettags - 3ms
+[2018-09-20 17:38:52.056] [INFO] console - GET /user/checkToken - 2ms
+[2018-09-20 17:38:53.770] [INFO] console - GET /article/getdraftlist?name=xx - 3ms
+[2018-09-20 17:38:55.712] [INFO] console - GET /article/read_article?artid=5ba36808b58a3f20ec38e10e - 6ms
+[2018-09-20 17:38:58.562] [INFO] console - GET /article/read_article?artid=5ba36803b58a3f20ec38e10d - 2ms
+[2018-09-20 17:39:01.807] [INFO] console - GET /article/read_article?artid=5ba36808b58a3f20ec38e10e - 5ms
+[2018-09-20 17:39:02.794] [INFO] console - GET /article/read_article?artid=5ba36808b58a3f20ec38e10e - 2ms
+[2018-09-20 17:39:04.467] [INFO] console - 修改文章-------------------------
+[2018-09-20 17:39:04.475] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 修改文章, sta: 1 
+[2018-09-20 17:39:04.475] [INFO] console - POST /article/upload_article - 8ms
+[2018-09-20 17:39:05.427] [INFO] console - GET /article/read_article?artid=5ba36803b58a3f20ec38e10d - 2ms
+[2018-09-20 17:39:06.648] [INFO] console - 修改文章-------------------------
+[2018-09-20 17:39:06.651] [INFO] Bloglog - Blog: Upload_article , username: xx, type: 修改文章, sta: 1 
+[2018-09-20 17:39:06.651] [INFO] console - POST /article/upload_article - 3ms
+[2018-09-20 17:39:07.822] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 5ms
+[2018-09-20 17:39:08.124] [INFO] console - POST /user/getuserinfo - 2ms
+[2018-09-20 17:39:08.130] [INFO] console - GET /article/gettags - 2ms
+[2018-09-20 17:39:11.778] [INFO] console - POST /user/getinfo - 5ms
+[2018-09-20 17:39:11.783] [INFO] console - GET /article/getpersonarticle?name=xx - 6ms
+[2018-09-20 17:39:16.624] [INFO] console - GET /article/getpersonarticle?name=xx - 2ms
+[2018-09-20 17:39:58.635] [INFO] Bloglog - Blog: Updateavatar ,username: xx
+[2018-09-20 17:39:58.635] [INFO] console - POST /user/updateavatar - 6ms
+[2018-09-20 17:39:58.881] [INFO] console - POST /user/getinfo - 2ms
+[2018-09-20 17:40:14.133] [INFO] console - POST /user/getinfo - 2ms
+[2018-09-20 17:40:14.152] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 1ms
+[2018-09-20 17:41:27.850] [INFO] console - POST /user/getinfo - 2ms
+[2018-09-20 17:41:27.905] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 0ms
+[2018-09-20 17:41:44.232] [INFO] Bloglog - Blog: Updateavatar ,username: xx
+[2018-09-20 17:41:44.232] [INFO] console - POST /user/updateavatar - 9ms
+[2018-09-20 17:41:46.636] [INFO] console - POST /user/getinfo - 3ms
+[2018-09-20 17:41:47.027] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 1ms
+[2018-09-20 17:41:49.098] [INFO] console - POST /user/getuserinfo - 4ms
+[2018-09-20 17:41:49.100] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 6ms
+[2018-09-20 17:41:49.396] [INFO] console - GET /article/gettags - 1ms
+[2018-09-20 17:45:22.664] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 7ms
+[2018-09-20 17:45:22.685] [INFO] console - POST /user/getuserinfo - 4ms
+[2018-09-20 17:45:22.697] [INFO] console - GET /article/gettags - 15ms
+[2018-09-20 17:45:23.904] [INFO] console - GET /upload/avatar/5ba3631427c9b32228ef56cd.png - 7ms
+[2018-09-20 17:46:06.906] [INFO] console - GET /article/read_article?artid=5ba362d34cd9da23c886e35a - 3ms
+[2018-09-20 17:46:15.140] [INFO] console - GET /article/gettagslist?tagname=sdfds - 26ms
+[2018-09-20 17:46:19.100] [INFO] console - GET /article/gettags - 1ms
+[2018-09-20 17:46:22.963] [INFO] console - GET /article/gettagslist?tagname=sdfds - 1ms
+[2018-09-20 17:46:26.098] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 13ms
+[2018-09-20 17:47:47.447] [INFO] console - GET /article/read_article?artid=5ba36803b58a3f20ec38e10d - 5ms
+[2018-09-20 17:47:50.204] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 4ms
+[2018-09-20 17:47:56.803] [INFO] console - GET /article/read_article?artid=5ba36803b58a3f20ec38e10d - 2ms
+[2018-09-20 17:47:59.354] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 5ms
+[2018-09-20 17:48:03.066] [INFO] console - GET /article/gettags - 6ms
+[2018-09-20 17:48:05.598] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 3ms
+[2018-09-20 17:48:31.004] [INFO] console - GET /article/gettags - 1ms
+[2018-09-20 17:48:33.599] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 3ms
+[2018-09-20 17:48:38.352] [INFO] console - GET /article/gettags - 1ms
+[2018-09-20 17:48:43.704] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 5ms
+[2018-09-20 17:48:50.302] [INFO] console - GET /article/gettags - 2ms
+[2018-09-20 17:49:31.194] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 6ms
+[2018-09-20 17:49:34.135] [INFO] console - GET /article/gettags - 2ms
+[2018-09-20 17:49:48.172] [INFO] console - GET /article/getarticlelist?page_index=1&page_size=3 - 5ms

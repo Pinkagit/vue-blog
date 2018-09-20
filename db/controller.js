@@ -129,7 +129,7 @@ const uploadAvatar = (id, path) => {
     return new Promise((resolve, reject) => {
         let _id = mongoose.Types.ObjectId(id);
 
-        User.update({ _id }, { "$set": { "avatar": path } }).exec((err, doc) => {
+        User.updateOne({ _id }, { "$set": { "avatar": path } }).exec((err, doc) => {
             if (err) {
                 reject(err)
             }
@@ -144,7 +144,7 @@ const updatePassword = (id, password) => {
     return new Promise((resolve, reject) => {
         let _id = mongoose.Types.ObjectId(id);
 
-        User.update({ _id }, { "$set": { "password": password } }).exec((err, doc) => {
+        User.updateOne({ _id }, { "$set": { "password": password } }).exec((err, doc) => {
             if (err) {
                 reject(err)
             }
@@ -159,7 +159,7 @@ const updateUsername = async(oldusername, newusername) => {
     let sta = true;
     await new Promise((resolve, reject) => {
         // 修改 User 表
-        User.update({ "username": oldusername }, { "$set": { "username": newusername } }).exec((err, doc) => {
+        User.updateOne({ "username": oldusername }, { "$set": { "username": newusername } }).exec((err, doc) => {
             if (err) {
                 sta = false;
                 reject(err);
@@ -171,7 +171,7 @@ const updateUsername = async(oldusername, newusername) => {
 
     await new Promise((resolve, reject) => {
         // 修改 Article 表(批量)
-        Article.update({ "author": oldusername }, { "$set": { "author": newusername } }, { multi: true, upsert: false }).exec((err, doc) => {
+        Article.updateOne({ "author": oldusername }, { "$set": { "author": newusername } }, { multi: true, upsert: false }).exec((err, doc) => {
             if (err) {
                 sta = false;
                 reject(err);
@@ -239,7 +239,7 @@ const draftList = (name) => {
 // 文章总数
 const articleNum = () => {
     return new Promise((resolve, reject) => {
-        Article.find({ ispublish:true }).count().exec((err, doc) => {
+        Article.find({ ispublish: true }).countDocuments().exec((err, doc) => {
             if (err) {
                 reject(err)
             }
@@ -251,7 +251,7 @@ const articleNum = () => {
 // 单用户的文章数
 const one_articleNum = (name) => {
     return new Promise((resolve, reject) => {
-        Article.find({ author: name, ispublish: true }).count().exec((err, doc) => {
+        Article.find({ author: name, ispublish: true }).countDocuments().exec((err, doc) => {
             if (err) {
                 reject(err)
             }
@@ -277,7 +277,7 @@ const update_articel = (id, ctx) => {
     return new Promise((resolve, reject) => {
         let _id = mongoose.Types.ObjectId(id)
 
-        Article.update({ _id }, ctx).exec((err, doc) => {
+        Article.updateOne({ _id }, ctx).exec((err, doc) => {
             if (err) {
                 reject(err)
             }
@@ -291,7 +291,7 @@ const delete_article = (id) => {
     return new Promise((resolve, reject) => {
         let _id = mongoose.Types.ObjectId(id)
 
-        Article.remove({ _id }).exec((err, doc) => {
+        Article.deleteOne({ _id }).exec((err, doc) => {
             if (err) {
                 reject(err)                
             }
@@ -304,7 +304,7 @@ const moveto_drafts = (id) => {
     return new Promise((resolve, reject) => {
         let _id = mongoose.Types.ObjectId(id)
         
-        Article.update({ _id }, { "$set": {"ispublish": false} }).exec((err, doc) => {
+        Article.updateOne({ _id }, { "$set": {"ispublish": false} }).exec((err, doc) => {
             if (err) {
                 reject(err)
             }

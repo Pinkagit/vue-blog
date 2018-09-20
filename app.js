@@ -4,6 +4,9 @@ const body = require('koa-body')
 const static = require('koa-static')
 const path = require('path')
 
+// 引入config
+global.config = require('./config.js')
+
 const app = new Koa()
 
 // 静态资源相对于index.js的路径
@@ -30,7 +33,7 @@ const article = require('./routes/article')
 Router.use('/user', user.routes(), user.allowedMethods())
 Router.use('/article', article.routes(), article.allowedMethods())
 
-// 
-app.listen(3000, () => {
-    console.log("Server starting at port 3000.");
+// 监听端口
+app.listen(global.config.port, () => {
+    console.log(`Server listening on port ${global.config.port}.`);
 })

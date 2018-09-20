@@ -6,8 +6,14 @@ const common = require('./utils/common')
 const sha1 = require('sha1')
 const path = require('path')
 const fs = require('fs')
+const log = require('../log')
+const moment = require('moment');
 
 // 登入
+router.post('/login', async function (ctx, next) {
+    ctx.state.username = ctx.request.body.username
+    await next();
+})
 router.post('/login', async function (ctx, next) {
 
     let username = ctx.request.body.username;
@@ -49,6 +55,9 @@ router.post('/login', async function (ctx, next) {
         ret = '密码错误！';
         token = '';
     }
+
+    // log
+    log.logger.info(`Blog: Login ,username: ${ctx.state.username}, sta:${sta}`)
     
     ctx.response.body = {
         sta,
@@ -85,7 +94,6 @@ const confupload = body({
 
 // 注册
 router.post('/register', confupload, async function (ctx, next) {
-
     let user = {
         username: ctx.request.body.username,
         password: sha1(ctx.request.body.password),
@@ -102,11 +110,14 @@ router.post('/register', confupload, async function (ctx, next) {
         sta = 0;
     } else if (regInfo.registered === 1) {
         msg = '注册成功！';
-        sta = 1;
+        sta = 1;    
     } else {
         msg = '注册失败！';
         sta = 0;
     }
+
+    // log
+    log.logger.info(`Blog: Register ,username: ${user.username}, sta: ${sta}`)
 
     if (sta == 1) {         // 修改头像名字
         let oldFileName, oldPath, newPath;
@@ -313,6 +324,9 @@ const confupdate = body({
 // 更新头像
 router.post("/updateavatar", confupdate, tokenController.checkToken, async function (ctx, next) {
 
+    // log
+    log.logger.info(`Blog: Updateavatar ,username: ${ctx.request.body.username}`)
+    
     ctx.response.body = {
         sta: 1,
     }
@@ -346,6 +360,9 @@ router.post("/updatepassword", tokenController.checkToken, async function (ctx, 
         })
     }
 
+    // log
+    log.logger.info(`Blog: Updatepassword ,userid: ${userid}, sta: ${sta}`)
+    
     ctx.response.body = {
         msg,
         sta,
@@ -385,6 +402,9 @@ router.post('/updateusername', tokenController.checkToken, async function (ctx, 
             console.log(e);
         })
     }
+
+    // log
+    log.logger.info(`Blog: Updateusername ,oldusername: ${oldusername}, newusername:${newusername}, sta:${sta} `)
     
     ctx.response.body = {
         sta,

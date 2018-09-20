@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/login', { useNewUrlParser:true })
+mongoose.connect('mongodb://localhost/xlblog', { 
+    useNewUrlParser:true,
+    useCreateIndex: true,
+})
 
 let db = mongoose.connection;
 mongoose.Promise = global.Promise;

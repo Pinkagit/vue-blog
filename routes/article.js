@@ -5,6 +5,7 @@ const body = require('koa-body')
 const path = require('path')
 const dbController = require('../db/controller')
 const moment = require('moment');
+const log = require('../log')
 
 // 上传配置
 const confupload = body({
@@ -44,6 +45,9 @@ router.post('/upload_file', confupload, async function (ctx, next) {
     }
     img_path = img_path.split('static')[1]
 
+    // log
+    log.logger.info(`Blog: Upload_file ,username: ${ctx.state.username}, img_path:${img_path}`)
+    
     // 返回图片路径
     ctx.response.body = {
         img_path
@@ -101,6 +105,10 @@ router.post('/upload_article', async function (ctx, next) {
             msg = err
             console.log("ERRRRRR", err)
         })
+
+        // log
+        log.logger.info(`Blog: Upload_article , username: ${art.author}, type: 新增文章, sta: ${sta} `)
+        
     } else {
         // 修改文章
         console.log("修改文章-------------------------");
@@ -131,6 +139,9 @@ router.post('/upload_article', async function (ctx, next) {
             msg = e;
             console.log(e);
         })
+
+        // log
+        log.logger.info(`Blog: Upload_article , username: ${art.author}, type: 修改文章, sta: ${sta} `)
     }
     ctx.response.body = {
         sta,
@@ -274,6 +285,9 @@ router.post('/deletearticle', tokenController.checkToken, async function (ctx, n
         msg = e;
         console.log(e);
     })
+
+    // log
+    log.logger.info(`Blog: Deletearticle, artid: ${artid}, sta: ${sta}`)
     
     ctx.response.body = {
         sta,
@@ -296,6 +310,9 @@ router.get('/movetodrafts', tokenController.checkToken, async function (ctx, nex
         msg = e;
         console.log(e);
     })
+
+    // log
+    log.logger.info(`Blog: Movetodrafts, artid: ${artid}, sta: ${sta}`)
     
     ctx.response.body = {
         sta,
