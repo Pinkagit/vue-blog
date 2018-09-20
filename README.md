@@ -9,8 +9,8 @@
 后端：nodejs + koa2 + mongodb
 
 # 项目结构
-```bash
-	|-- config      
+```javascript
+    |-- config      
     |-- db          
     |-- logs
     |-- routes           
