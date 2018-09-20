@@ -3,6 +3,7 @@ const Router = require('koa-router')()
 const body = require('koa-body')
 const static = require('koa-static')
 const path = require('path')
+const log = require('./log')
 
 // 引入config
 global.config = require('./config.js')
