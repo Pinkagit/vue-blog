@@ -35,9 +35,9 @@
 1. 初始化项目
 
 ```
-$ npm install
+$ yarn
 $ cd static/vue-blog
-$ npm install
+$ yarn
 ```
  
 2. 启动MongoDB
