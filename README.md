@@ -36,23 +36,26 @@
 
 ```
 $ yarn
-$ cd static/vue-blog
-$ yarn
 ```
  
 2. 启动MongoDB
 ```bash
 $ mongod --dbpath XXX
 ```
-3. 启动服务器
+3. 启动项目
 ```bash
-$ node app.js
-```
-4. 启动项目
-```bash
-# static/vue-blog
 $ yarn start
 ```
+> 调试前端代码
+> ```
+> $ cd static/vue-blog 
+> $ yarn
+> $ yarn start
+> ```
+> build前端资源
+> ```
+> $ yarn run build
+> ```
 
 # 组件
 
