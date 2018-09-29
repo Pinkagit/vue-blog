@@ -15,10 +15,8 @@
     |-- logs
     |-- routes           
     |-- static                           // 静态资源
-    |   |-- static                          // build后资源文件
     |   |-- upload                          // 上传资源
     |   |-- vue-blog                        // 前端源码
-    |   |-- index.html                      // build后资源文件
     |   
     |-- .gitignore                       
     |-- README.md
@@ -36,25 +34,29 @@
 
 ```
 $ yarn
+$ cd static/vue-blog
+$ yarn
+```
+
+2. build前端资源
+```bash
+# static/vue-blog/
+$ yarn run build
 ```
  
-2. 启动MongoDB
+3. 启动MongoDB
 ```bash
 $ mongod --dbpath XXX
 ```
-3. 启动项目
+4. 启动项目
 ```bash
+# vue-blog/
 $ yarn start
 ```
 > 调试前端代码
 > ```
-> $ cd static/vue-blog 
-> $ yarn
+> # static/vue-blog 
 > $ yarn start
-> ```
-> build前端资源
-> ```
-> $ yarn run build
 > ```
 
 # 组件
