@@ -70,11 +70,11 @@ header{
     margin: 10px 0 25px;
     text-align: center;
     color: #999;
+    font-size: 14px;
 }
 nav{
     height: 53px;
     text-align: center;
-    // background: lightgoldenrodyellow;
     ul{
         list-style: none;
         margin: 0;

@@ -1,14 +1,20 @@
 <template>
-    <div>
+    <div ref="tag-wrap">
         <p class="total">目前共计 {{ tags_num }}个标签</p>
-        <canvas :class="[ isHover ? 'ishover': '' ]" id="canvas" width="700px" height="500px"></canvas>
+        <canvas :class="[ isHover ? 'ishover': '' ]" id="canvas" width="700px" height="300px"></canvas>
+
+        <page-footer></page-footer>
     </div>
 </template>
 
 <script>
+import footer from "./footer";
 import WordCloud from "../../static/wordcloud2/wordcloud2.js";
 
 export default {
+    components: {
+        "page-footer": footer,
+    },
     data() {
         return {
             // 
@@ -59,6 +65,7 @@ export default {
     },
     mounted() {
         var canvas = document.getElementById('canvas');
+        canvas.width = this.$refs['tag-wrap'].offsetWidth;
     },
     computed: {
         // 格式化taglist

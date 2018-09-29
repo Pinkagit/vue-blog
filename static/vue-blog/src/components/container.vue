@@ -8,7 +8,7 @@
         >
             <router-view class="containerView"></router-view>
         </transition>
-        <b-aside></b-aside>
+        <b-aside class="auto-mobile"></b-aside>
         <b-tools></b-tools>
     </div>
 </template>
@@ -37,8 +37,18 @@ export default {
     width: 700px;
     height: auto;
     margin: 0 auto;
+    box-sizing: border-box;
+    @media screen and (max-width: 700px) {
+        width: 100%;
+        padding: 0 5%; 
+    }
 }
 .containerView{
     overflow: hidden;
+}
+.auto-mobile {
+    @media screen and (max-width: 700px) {
+        display: none;
+    }
 }
 </style>

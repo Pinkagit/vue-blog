@@ -114,6 +114,11 @@ export default {
 .container{
     margin: 50px auto;
     width: 800px;
+    box-sizing: border-box;
+    @media screen and (max-width:700px) {
+        width: 100%;
+        padding: 0 5%;
+    }
 }
 header{
     overflow: hidden;
@@ -178,6 +183,9 @@ nav{
     color: #555;
     font-size: 28px;
     cursor:pointer;
+    @media screen and (max-width: 700px) {
+        display: none;
+    }
 }
 </style>
 

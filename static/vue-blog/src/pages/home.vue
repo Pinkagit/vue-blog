@@ -32,6 +32,9 @@ export default {
 }
 .active{
     padding-right: 320px;
+    @media screen and (max-width: 700px) {
+        padding-right: 0px;   
+    }
 }
 </style>
 

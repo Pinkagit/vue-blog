@@ -30,13 +30,19 @@
                 <span class="author">{{ item.author }}</span>
             </li>
         </ul>
+
+        <page-footer></page-footer>
     </div>
 </template>
 
 <script>
 import moment from "moment";
+import footer from "./footer";
 
 export default {
+    components: {
+        "page-footer": footer,
+    },
     data() {
         return {
             searContent: '',
@@ -99,36 +105,12 @@ export default {
     font-size: 14px;
 }
 .input-suffix{
-    width: 500px;
+    width: 70%;
     margin: 0 auto;
     .el-autocomplete{
         width: 100%;
     }
     
-}
-</style>
-
-<style lang="scss">
-.my-autocomplete{
-    li{
-        .title{
-            float: left;
-            font-size: 15px;
-            max-width: 280px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-       .time{
-           float:right;
-           font-size: 12px;
-           margin-right: 10px;
-           color: #82848a;
-       }
-        .author{
-            float: right;
-            color: #555;
-        }
-    }
 }
 
 .list_container{
@@ -147,7 +129,7 @@ export default {
             float: left;
         }
         .title{
-            width: 450px;
+            width: 60%;
             color: #666;
             height: 100%;
             font-size: 16px;
@@ -171,6 +153,30 @@ export default {
         &:hover{
             border-bottom-color: #666;
             color: #666;
+        }
+    }
+}
+</style>
+
+<style lang="scss">
+.my-autocomplete{
+    li{
+        .title{
+            float: left;
+            font-size: 15px;
+            max-width: 50%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+       .time{
+           float: right;
+           font-size: 12px;
+           margin-right: 10px;
+           color: #82848a;
+       }
+        .author{
+            float: right;
+            color: #555;
         }
     }
 }

@@ -7,7 +7,7 @@
                         <el-input v-model.trim="username" placeholder="新用户名"></el-input>
                     </el-col>
 
-                    <el-col :span="4" :offset="9">
+                    <el-col :span="4" :offset="9" :xs="{ offset: 4 }">
                         <el-button :loading="username_isloading" @click="updateUsername">更改用户名</el-button>
                     </el-col>
                 </el-row>
@@ -35,7 +35,7 @@
                             </el-form-item>
                         </el-col>
 
-                        <el-col :span="4" :offset="9">
+                        <el-col :span="4" :offset="9" :xs="{ offset: 4 }">
                             <el-button :loading="password_isloading" @click="updatePassword">更改密码</el-button>
                         </el-col>
                     </el-row>
@@ -53,7 +53,7 @@
                         @push-filedata=onPushFiledata
                         ></avatar>
                     </el-col>
-                    <el-col :span="4" :offset="9" style="margin-top:220px;">
+                    <el-col :span="4" :offset="9" :xs="{ offset: 5 }" style="margin-top:220px;">
                         <el-button :loading="avatar_isloading" @click="updateAvatar">更改头像</el-button>
                     </el-col>
                 </el-row>

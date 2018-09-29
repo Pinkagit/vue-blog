@@ -75,7 +75,7 @@ export default {
             float: left;
         }
         .title{
-            width: 450px;
+            width: 60%;
             color: #666;
             height: 100%;
             font-size: 16px;

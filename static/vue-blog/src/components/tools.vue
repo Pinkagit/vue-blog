@@ -67,6 +67,9 @@ export default {
     position: fixed;
     bottom: 55px;
     z-index: 999;
+    @media screen and (max-width: 700px) {
+        display: none;
+    }
     &::before, &::after{
         content: '';
         display: block;
@@ -102,9 +105,13 @@ export default {
     bottom: 15px;
     text-align: center;
     line-height: 30px;
+    @media screen and (max-width: 700px) {
+        bottom: 60px;
+    }
+    .iconfont{
+        color: #fff;
+        font-size: 20px;
+    }
 }
-.iconfont{
-    color: #fff;
-    font-size: 20px;
-}
+
 </style>

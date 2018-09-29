@@ -13,7 +13,7 @@
                 </p>
                 <i class="iconfont icon-zhanghaoguanli" v-if="isShow" @click.stop="showTab(index)">
                     <div class="tab" v-show="index == tabShow_index">
-                        <p @click="modify(item.id)">修改</p>
+                        <p class="modify" @click="modify(item.id)">修改</p>
                         <p @click="del(item.id, index)">删除</p>
                         <p @click="moveToDrafts(item.id, index)">移入草稿箱</p>
                     </div>
@@ -152,9 +152,13 @@ export default {
             font-size: 13px;
         }
         .titag_container{
+            width: 80%;
+            @media screen and (max-width: 700px) {
+                width: 100%;
+            }
             .title{
                 display: inline-block;
-                max-width: 500px;
+                max-width: 62.5%;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -166,6 +170,9 @@ export default {
                 transition: color .3s;
                 &:hover{
                     color: #555;
+                }
+                @media screen and (max-width: 700px) {
+                    max-width: 100%;
                 }
             }
             .tag{
@@ -191,6 +198,14 @@ export default {
             width: 80%;
             color: #999;
             font-size: 13px;
+            @media screen and (max-width: 700px) {
+                width: 100%;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
         }
         
         .icon-zhanghaoguanli{
@@ -208,10 +223,17 @@ export default {
             box-sizing: border-box;
             width: 100px;
             border: 1px solid #999;
+            background: #fff;
             font-size: 15px;
             border-radius: 5px;
             box-shadow: 3px 5px 12px rgba(0, 0, 0, .175);
-            overflow: hidden;            
+            overflow: hidden;        
+            @media screen and (max-width: 700px) {
+                left: -330%;
+                .modify {
+                    display: none;
+                }
+            }    
             p{
                 padding-left: 5px;
                 &:not(:last-child) {
