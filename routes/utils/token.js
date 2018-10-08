@@ -25,6 +25,9 @@ const checkToken = async(ctx, next) => {
     let tokenContent;
     try {
         tokenContent = await jwt.verify(token, secret)  //如果token过期或验证失败，将抛出错误
+
+        ctx.state.user = tokenContent;                  // tokenContent存入ctx
+        
     } catch (error) {
         ctx.throw(401, 'invalid token')
     }

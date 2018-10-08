@@ -287,7 +287,7 @@ router.post('/deletearticle', tokenController.checkToken, async function (ctx, n
     })
 
     // log
-    log.logger.info(`Blog: Deletearticle, artid: ${artid}, sta: ${sta}`)
+    log.logger.info(`Blog: Deletearticle, username: ${ctx.state.user.username}, artid: ${artid}, sta: ${sta}`)
     
     ctx.response.body = {
         sta,
@@ -312,7 +312,7 @@ router.get('/movetodrafts', tokenController.checkToken, async function (ctx, nex
     })
 
     // log
-    log.logger.info(`Blog: Movetodrafts, artid: ${artid}, sta: ${sta}`)
+    log.logger.info(`Blog: Movetodrafts, username: ${ctx.state.user.username}, artid: ${artid}, sta: ${sta}`)
     
     ctx.response.body = {
         sta,

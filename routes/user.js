@@ -325,7 +325,7 @@ const confupdate = body({
 router.post("/updateavatar", confupdate, tokenController.checkToken, async function (ctx, next) {
 
     // log
-    log.logger.info(`Blog: Updateavatar ,username: ${ctx.request.body.username}`)
+    log.logger.info(`Blog: Updateavatar ,username: ${ctx.state.user.username}`)
     
     ctx.response.body = {
         sta: 1,
@@ -361,7 +361,7 @@ router.post("/updatepassword", tokenController.checkToken, async function (ctx, 
     }
 
     // log
-    log.logger.info(`Blog: Updatepassword ,userid: ${userid}, sta: ${sta}`)
+    log.logger.info(`Blog: Updatepassword ,username: ${ctx.state.user.username}, sta: ${sta}`)
     
     ctx.response.body = {
         msg,
