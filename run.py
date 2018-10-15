@@ -45,7 +45,7 @@ if __name__ == "__main__":
     print(">>>> -------------------------------------------")
     if len(opt) == 1:
         print("Usage: ")
-        print("python run.py [cmd:build]")
+        print("python run.py [cmd:start/stop/restart/build]")
         exit()
 
     action = opt[1]
