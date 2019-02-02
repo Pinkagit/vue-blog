@@ -22,6 +22,12 @@
                         </el-col>
                     </el-form-item>
 
+                    <el-form-item label="邀请码" prop="invite_code">
+                        <el-col :span="24">
+                            <el-input v-model="regInfo.invite_code"></el-input>
+                        </el-col>
+                    </el-form-item>
+
                     <el-form-item>
                         <el-button :loading="isLoading" @click="submit">确定</el-button>
                     </el-form-item>
@@ -82,6 +88,7 @@ export default {
                 name: '',
                 password: '',
                 re_password: '',
+                invite_code: '',
             },
             // 表单验证规则
             rules: {
@@ -93,6 +100,9 @@ export default {
                 ],
                 re_password: [
                     { validator: validateRePass, trigger: 'blur' }
+                ],
+                invite_code: [
+                    { required: true, message: '请输邀请码', trigger: 'blur' }
                 ]
             },
         }
@@ -124,6 +134,7 @@ export default {
             formdata.set('username', this.regInfo.name);
             formdata.set('password', this.regInfo.password);
             formdata.set('avatar', newValue)
+            formdata.set('invite_code', this.regInfo.invite_code);
             
             this.$ajax.userRegister(formdata).then(response => {
                 console.log(response);

@@ -4,7 +4,7 @@
             <p class="copyright">
                 &copy;2018
                 <i class="iconfont icon-xin icon"></i>
-                贤隆团队
+                队友在哪里
             </p>
         </div>
     </footer>

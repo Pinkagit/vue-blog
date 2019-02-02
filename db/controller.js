@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const User = require('./db').User;
 const Article = require('./db').Article;
+const inviteCode = require('./db').inviteCode;
 
 const moment = require('moment');
 const objectIdToTimestamp = require('objectid-to-timestamp')
@@ -34,6 +35,9 @@ const Register = async(ctx) => {
                     if (err) {
                         reject(err)
                     }
+                    
+                    console.log("!=========>", rep)
+                    
                     regInfo.id = rep._id;
                     regInfo.registered = 1;
                     resolve()
@@ -336,6 +340,46 @@ const get_tagsList = (name) => {
     })
 }
 
+const save_inviteCode = (codeArr) => {
+    let inviteCodeDoc = new inviteCode({
+        code: codeArr
+    })
+    
+    return new Promise((resolve, reject) => {
+        inviteCodeDoc.save((err, rep) => {
+            if (err) {
+                reject(err)
+            }
+            resolve(rep)
+        })
+    })
+}
+
+// 查询邀请码
+const get_inviteCode = () => {
+    return new Promise((resolve, reject) => {
+        inviteCode.find({}, (err, doc) => {
+            if(err) {
+                reject(err)
+            }
+            resolve(doc)
+        })
+    })
+}
+
+// 删除指定邀请码
+const del_inviteCode = (code) => {
+    let _id = mongoose.Types.ObjectId("5c5530c87398172ce08f207f");
+    return new Promise((resolve, reject) => {
+        inviteCode.updateOne({'_id': _id}, {'$pull': {'code': code}}).exec((err, doc) => {
+            if (err) {
+                reject(err)
+            }
+            resolve(1)
+        })
+    })
+}
+
 module.exports = {
     Register,
     findUser,
@@ -358,4 +402,7 @@ module.exports = {
     moveto_drafts,
     get_tags,
     get_tagsList,
+    save_inviteCode,
+    get_inviteCode,
+    del_inviteCode,
 }

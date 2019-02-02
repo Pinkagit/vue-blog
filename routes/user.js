@@ -92,6 +92,46 @@ const confupload = body({
     }
 })
 
+// 保存邀请码
+router.get('/saveinvitecode', async function(ctx, next) {
+    let inviteCodeArr = [
+        'PRZIA',
+        'SO69W',
+        'IG7Q1',
+        'MKJUY',
+        'ZF3L1',
+        'DT1YX',
+        'VKFNK',
+        'JR3SR',
+        'FWDPD',
+        'CUSSN',
+        'MRXCE',
+        'YIGUE',
+        'I7J8G',
+        '19AFD',
+        '3EQCG',
+        'QOMNB'
+    ]
+
+    let sta, msg;
+    await dbController.save_inviteCode(inviteCodeArr)
+        .then(v => {
+            console.log(v);
+            sta = 1;
+            msg = 'success!'
+        })
+        .catch(e => {
+            console.log(e);
+            sta = 0;
+            msg = e.message;
+        })
+
+    ctx.response.body = {
+        sta,
+        msg
+    }
+})
+
 // 注册
 router.post('/register', confupload, async function (ctx, next) {
     let user = {
@@ -99,18 +139,34 @@ router.post('/register', confupload, async function (ctx, next) {
         password: sha1(ctx.request.body.password),
         token: tokenController.createToken(ctx.request.body.username),
         avatar: '',
+        invite_code: ctx.request.body.invite_code
     }
 
     // 检测用户是否存在，并添加数据库
     let regInfo = await dbController.Register(user);
     
     let msg, sta;
-    if (regInfo.registered === 0) {
+
+    let inviteCodeObj = await dbController.get_inviteCode();
+
+    inviteCodeArr = inviteCodeObj[0].code;
+
+    if(inviteCodeArr.indexOf(user.invite_code) == -1) {
+        msg = '请输入有效邀请码！'
+        sta = 0;
+    } else if (regInfo.registered === 0) {
         msg = '用户已存在！';
         sta = 0;
     } else if (regInfo.registered === 1) {
         msg = '注册成功！';
         sta = 1;    
+
+        await dbController.del_inviteCode(user.invite_code).then(v => {
+            console.log(v)
+        }).catch(e => {
+            console.log(e);
+        })
+        
     } else {
         msg = '注册失败！';
         sta = 0;

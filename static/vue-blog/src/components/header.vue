@@ -1,10 +1,10 @@
 <template>
     <header>
         <div class="title" id="top">
-            贤隆团队博客
+            我打我队友
         </div>
         <p class="subtitle">
-            0 error(s), 0 warning(s)
+            来不及了，快上车！
         </p>
         <nav>
             <ul>

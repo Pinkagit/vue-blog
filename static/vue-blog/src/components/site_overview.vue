@@ -10,7 +10,7 @@
                 <img src="../assets/img/logo.png" alt="logo">
             </div>
             <p class="title">
-                贤隆团队博客
+                我打我队友
             </p>
             <div class="menu">
                 <router-link class="meun-item" to="/">
@@ -190,6 +190,7 @@ export default {
     text-align: center;
     img{
         height: 100%;
+        border-radius: 15px;
     }
 }
 .title{

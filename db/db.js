@@ -35,9 +35,14 @@ let articleSchema = mongoose.Schema({
     catalog: new Array(),
 })
 
+let inviteCodeSchema = mongoose.Schema({
+    code: new Array()
+})
+
 let model = {
     User: mongoose.model('User', userSchema),
     Article: mongoose.model('Article', articleSchema),
+    inviteCode: mongoose.model('inviteCode', inviteCodeSchema),
 }
 
 module.exports = model

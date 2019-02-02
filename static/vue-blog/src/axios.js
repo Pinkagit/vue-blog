@@ -142,6 +142,8 @@ export default {
     checkToken() {
         return ajax.get("/user/checkToken")
     },
-
+    saveInviteCode() {
+        return ajax.get('/user/saveinvitecode')
+    }
 
 }
