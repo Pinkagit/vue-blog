@@ -19,7 +19,7 @@ def do_action(action):
 
 
 def start():
-    os.system("pm2 start app.js")
+    os.system("pm2 start app.js --name blog")
 
 
 def stop():

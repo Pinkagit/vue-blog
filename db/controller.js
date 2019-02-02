@@ -369,7 +369,7 @@ const get_inviteCode = () => {
 
 // 删除指定邀请码
 const del_inviteCode = (code) => {
-    let _id = mongoose.Types.ObjectId("5c5530c87398172ce08f207f");
+    let _id = mongoose.Types.ObjectId("5c5540f935f76e39db8b845b");
     return new Promise((resolve, reject) => {
         inviteCode.updateOne({'_id': _id}, {'$pull': {'code': code}}).exec((err, doc) => {
             if (err) {

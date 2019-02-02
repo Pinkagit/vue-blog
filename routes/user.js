@@ -142,19 +142,24 @@ router.post('/register', confupload, async function (ctx, next) {
         invite_code: ctx.request.body.invite_code
     }
 
+    // 邀请码
+    let inviteCodeObj = await dbController.get_inviteCode();
+    inviteCodeArr = inviteCodeObj[0].code;
+
+    if(inviteCodeArr.indexOf(user.invite_code) == -1) {
+        ctx.response.body = {
+            msg:'请输入有效邀请码！',
+            sta: 0
+        }
+        return false;
+    }
+
     // 检测用户是否存在，并添加数据库
     let regInfo = await dbController.Register(user);
     
     let msg, sta;
 
-    let inviteCodeObj = await dbController.get_inviteCode();
-
-    inviteCodeArr = inviteCodeObj[0].code;
-
-    if(inviteCodeArr.indexOf(user.invite_code) == -1) {
-        msg = '请输入有效邀请码！'
-        sta = 0;
-    } else if (regInfo.registered === 0) {
+    if (regInfo.registered === 0) {
         msg = '用户已存在！';
         sta = 0;
     } else if (regInfo.registered === 1) {
@@ -162,9 +167,9 @@ router.post('/register', confupload, async function (ctx, next) {
         sta = 1;    
 
         await dbController.del_inviteCode(user.invite_code).then(v => {
-            console.log(v)
+            console.log("-----------------del_inviteCode", v)
         }).catch(e => {
-            console.log(e);
+            console.log("error-----inviteCode",e);
         })
         
     } else {
